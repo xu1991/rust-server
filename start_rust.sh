@@ -193,6 +193,15 @@ fi
 
 # Set the working directory
 cd /steamcmd/rust
+mv /steamcmd/rust/libsteam_api.so  /steamcmd/rust/libsteam_api.so.bak
+mv /steamcmd/rust/RustDedicated_Data/Plugins/libsteam_api.so  /steamcmd/rust/RustDedicated_Data/Plugins/ibsteam_api.so.bak
+mv /steamcmd/rust/RustDedicated_Data/Plugins/x86_64/libsteam_api.so  /steamcmd/rust/RustDedicated_Data/Plugins/x86_64/libsteam_api.so.bak
+cp /home/steamcmd/rust/libsteam_api.so  /steamcmd/rust
+cp /home/steamcmd/rust/libsteam_api.so  /steamcmd/rust/RustDedicated_Data/Plugins/
+cp /home/steamcmd/rust/libsteam_api.so  /steamcmd/rust/RustDedicated_Data/Plugins/x86_64
+cp /home/steamcmd/rust/Compiler.x86_x64  /steamcmd/rust
+cp -rf /home/steamcmd/rust/RustDedicated_Data/Managed/*  /steamcmd/rust/RustDedicated_Data/Managed
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/steamcmd/rust/RustDedicated_Data/Managed/x64/
 
 # Run the server
 echo "Starting Rust.."
