@@ -15,6 +15,7 @@ RUN apt-get update && \
         libgdiplus && \
     rm -rf /var/lib/apt/lists/*
 
+
 # Remove default nginx stuff
 RUN rm -fr /usr/share/nginx/html/* && \
 	rm -fr /etc/nginx/sites-available/* && \
@@ -86,7 +87,7 @@ EXPOSE 28016
 EXPOSE 28082
 
 # Setup default environment variables for the server
-ENV RUST_SERVER_STARTUP_ARGUMENTS "-batchmode -load -nographics +server.secure 1"
+ENV RUST_SERVER_STARTUP_ARGUMENTS "-batchmode -load -nographics +server.secure 0 server.encryption 0"
 ENV RUST_SERVER_IDENTITY "docker"
 ENV RUST_SERVER_PORT ""
 ENV RUST_SERVER_SEED "12345"
@@ -100,7 +101,7 @@ ENV RUST_RCON_PASSWORD "docker"
 ENV RUST_APP_PORT "28082"
 ENV RUST_UPDATE_CHECKING "0"
 ENV RUST_UPDATE_BRANCH "public"
-ENV RUST_START_MODE "0"
+ENV RUST_START_MODE "2"
 ENV RUST_OXIDE_ENABLED "0"
 ENV RUST_OXIDE_UPDATE_ON_BOOT "1"
 ENV RUST_RCON_SECURE_WEBSOCKET "0"
@@ -112,7 +113,8 @@ ENV RUST_SERVER_SAVE_INTERVAL "600"
 ENV CHOWN_DIRS "/app,/steamcmd,/usr/share/nginx/html,/var/log/nginx"
 
 # Expose the volumes
-# VOLUME [ "/steamcmd/rust" ]
+#VOLUME [ "/steamcmd/rust" ]
+
 
 # Start the server
 CMD [ "bash", "/app/start.sh"]
