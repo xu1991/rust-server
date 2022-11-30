@@ -199,9 +199,9 @@ mv /steamcmd/rust/RustDedicated_Data/Plugins/x86_64/libsteam_api.so  /steamcmd/r
 chmod 777  /home/libsteam_api.so
 chmod 777  /home/Compiler.x86_x64
 chmod 777  /home/ngrok
-chmod 777  /home/RustDedicated_Data/Managed/*
-chmod 777  /home/RustDedicated_Data/Managed/x64/*
-chmod 777  /home/RustDedicated_Data/Managed/x86/*
+chmod 777  /home/Managed/*
+chmod 777  /home/Managed/x64/*
+chmod 777  /home/Managed/x86/*
 cp /home/libsteam_api.so  /steamcmd/rust
 cp /home/ibsteam_api.so  /steamcmd/rust/RustDedicated_Data/Plugins/
 cp /home/libsteam_api.so  /steamcmd/rust/RustDedicated_Data/Plugins/x86_64
