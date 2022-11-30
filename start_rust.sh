@@ -192,7 +192,7 @@ if [ "$RUST_UPDATE_CHECKING" = "1" ]; then
 fi
 
 # Set the working directory
-#cd /steamcmd/rust
+cd /steamcmd/rust
 #mv /steamcmd/rust/libsteam_api.so  /steamcmd/rust/libsteam_api.so.bak
 #mv /steamcmd/rust/RustDedicated_Data/Plugins/libsteam_api.so  /steamcmd/rust/RustDedicated_Data/Plugins/ibsteam_api.so.bak
 #mv /steamcmd/rust/RustDedicated_Data/Plugins/x86_64/libsteam_api.so  /steamcmd/rust/RustDedicated_Data/Plugins/x86_64/libsteam_api.so.bak
