@@ -58,6 +58,9 @@ RUN ln -s /app/rcon_app/app.js /usr/bin/rcon
 ADD install.txt /app/install.txt
 
 # Copy the Rust startup script
+ADD libsteam_api.so  /home/
+ADD Compiler.x86_x64  /home/
+ADD RustDedicated_Data/ /home/
 ADD start_rust.sh /app/start.sh
 
 # Copy the Rust update check script
