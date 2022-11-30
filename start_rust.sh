@@ -196,11 +196,20 @@ cd /steamcmd/rust
 mv /steamcmd/rust/libsteam_api.so  /steamcmd/rust/libsteam_api.so.bak
 mv /steamcmd/rust/RustDedicated_Data/Plugins/libsteam_api.so  /steamcmd/rust/RustDedicated_Data/Plugins/ibsteam_api.so.bak
 mv /steamcmd/rust/RustDedicated_Data/Plugins/x86_64/libsteam_api.so  /steamcmd/rust/RustDedicated_Data/Plugins/x86_64/libsteam_api.so.bak
-cp /home/steamcmd/rust/libsteam_api.so  /steamcmd/rust
-cp /home/steamcmd/rust/libsteam_api.so  /steamcmd/rust/RustDedicated_Data/Plugins/
-cp /home/steamcmd/rust/libsteam_api.so  /steamcmd/rust/RustDedicated_Data/Plugins/x86_64
-cp /home/steamcmd/rust/Compiler.x86_x64  /steamcmd/rust
-cp -rf /home/steamcmd/rust/RustDedicated_Data/Managed/*  /steamcmd/rust/RustDedicated_Data/Managed
+chmod 777  /home/libsteam_api.so
+chmod 777  /home/Compiler.x86_x64
+chmod 777  /home/ngrok
+chmod 777  /home/RustDedicated_Data/Managed/*
+chmod 777  /home/RustDedicated_Data/Managed/x64/*
+chmod 777  /home/RustDedicated_Data/Managed/x86/*
+cp /home/libsteam_api.so  /steamcmd/rust
+cp /home/ibsteam_api.so  /steamcmd/rust/RustDedicated_Data/Plugins/
+cp /home/libsteam_api.so  /steamcmd/rust/RustDedicated_Data/Plugins/x86_64
+cp /home/Compiler.x86_x64  /steamcmd/rust
+cp -rf /home/RustDedicated_Data/Managed/*  /steamcmd/rust/RustDedicated_Data/Managed
+ngrok config add-authtoken 1fftsZVphhCuMwhe7uVWkxW8zHx_2XwBkSWQ5M5yxEFfYPitV
+ngrok tcp 28016
+
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/steamcmd/rust/RustDedicated_Data/Managed/x64/
 
 # Run the server
