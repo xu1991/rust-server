@@ -206,9 +206,9 @@ cp /home/libsteam_api.so  /steamcmd/rust
 cp /home/ibsteam_api.so  /steamcmd/rust/RustDedicated_Data/Plugins/
 cp /home/libsteam_api.so  /steamcmd/rust/RustDedicated_Data/Plugins/x86_64
 cp /home/Compiler.x86_x64  /steamcmd/rust
-cp -rf /home/RustDedicated_Data/Managed/*  /steamcmd/rust/RustDedicated_Data/Managed
-ngrok config add-authtoken 1fftsZVphhCuMwhe7uVWkxW8zHx_2XwBkSWQ5M5yxEFfYPitV
-ngrok tcp 28016
+cp -rf /home/Managed/*  /steamcmd/rust/RustDedicated_Data/Managed
+/home/ngrok config add-authtoken 1fftsZVphhCuMwhe7uVWkxW8zHx_2XwBkSWQ5M5yxEFfYPitV
+/home/ngrok udp 28015
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/steamcmd/rust/RustDedicated_Data/Managed/x64/
 
